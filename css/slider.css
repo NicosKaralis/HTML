@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*--Paging Styles--*/
+.paging {
+    position: absolute;
+    bottom: 10px; right: -7px;
+    width: 178px; height:47px;
+    /*--Assures the paging stays on the top layer--*/
+    z-index: 100;
+    text-align: center;
+    line-height: 40px;
+    background: url(../images/paging_bg.png) no-repeat;
+}
+.paging a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+.paging a.active {
+    font-weight: bold;
+    background: #920000;
+    border: 1px solid #610000;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.paging a:hover {
+    font-weight: bold;
+}
+/*--Window/Masking Styles--*/
+.window {
+    height:100px;    
+    width: 250px;
+    /*--Hides anything outside of the set width/height--*/
+    overflow: hidden;
+    position: relative;
+}
+.slide_reel {
+    position: absolute;
+    top: 0; left: 0;
+}
+.slide_reel .slide {
+    width:100px;
+    height:250px;
+    float:left;
+		position: relative;
+}
+#slider {
+    background:#ccc;
+}
+/* slides style */
+.slide {
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+/*--Main Container--*/
+#slider {
+    float: left;
+    position: relative;
+}
