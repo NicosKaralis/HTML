@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta property="og:title" content="NicosBlog" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://nicosblog.heroku.com" />
+  <meta property="og:image" content="http://nicosblog.heroku.com/images/logo.png" />
+  <meta property="og:site_name" content="NicosBlog" />
+  <meta property="fb:admins" content="1003218257" />
+  
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>Generic Page</title>
   
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8">
   <link rel="stylesheet" href="css/slider.css" type="text/css" charset="utf-8">
   
+  <!-- Google +1 -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
   <script src="js/jquery-1.6.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -17,7 +29,7 @@
       <div id="header">
         <ul id="menu">
           <li><a href="">Portfolio</a></li>
-          <li><a href="" class="active">Home</a></li>
+          <li><a href="front page.html" class="active">Home</a></li>
           <li><a href="">Services</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Testimonials</a></li>
@@ -28,79 +40,142 @@
           <small>THE blog for rails developers</small>
         </div>
       </div>
-
-        <div id="block_featured" class="block slide">
-          <div class="slide">
-            <img src="images/ribbon_featured.png" class="ribbon" alt="Featured ribbon">
-            <div class="block_inside">
-            	<div class="image_block">
-            	  <img src="images/sample_feature.jpg" alt="Featured sample">
-            	</div>
-           	 	<div class="text_block">
-              	<h2>Eden Website Design</h2>
-                <small>in <a href="">web design</a> tagged <a href="">corporate</a>, <a href="">web2</a></small>
-
-                <p>And then a short description of the website would go in here.  Something saying maybe what awesome skills I used on the project and how happy the client was. </p><br>
-              	<a href="" class="button">View Project</a>
-              </div>
-            </div>
-          </div><!-- .slide -->
-          <div class="slide">
-            <div class="block_inside">
-            	<div class="image_block">
-            	  <img src="images/sample_feature.jpg" alt="Featured sample">
-            	</div>
-           	 	<div class="text_block">
-              	<h2>Eden Website Design</h2>
-                <small>in <a href="">web design</a> tagged <a href="">corporate</a>, <a href="">web2</a></small>
-
-                <p>And then a short description of the website would go in here.  Something saying maybe what awesome skills I used on the project and how happy the client was. </p><br>
-              	<a href="" class="button">View Project</a>
-              </div>
-            </div>
-          </div><!-- .slide -->
-          <div class="slide">
-            <div class="block_inside">
-            	<div class="image_block">
-            	  <img src="images/sample_feature.jpg" alt="Featured sample">
-            	</div>
-           	 	<div class="text_block">
-              	<h2>Eden Website Design</h2>
-                <small>in <a href="">web design</a> tagged <a href="">corporate</a>, <a href="">web2</a></small>
-
-                <p>And then a short description of the website would go in here.  Something saying maybe what awesome skills I used on the project and how happy the client was. </p><br>
-              	<a href="" class="button">View Project</a>
-              </div>
-            </div>
-          </div><!-- .slide -->
-          <div class="slide">
-            <div class="block_inside">
-            	<div class="image_block">
-            	  <img src="images/sample_feature.jpg" alt="Featured sample">
-            	</div>
-           	 	<div class="text_block">
-              	<h2>Eden Website Design</h2>
-                <small>in <a href="">web design</a> tagged <a href="">corporate</a>, <a href="">web2</a></small>
-
-                <p>And then a short description of the website would go in here.  Something saying maybe what awesome skills I used on the project and how happy the client was. </p><br>
-              	<a href="" class="button">View Project</a>
-              </div>
-            </div>
-          </div><!-- .slide -->
-          
-      </div><!-- #block_featured -->
       
       <div id="block_content">
         <div id="content_area" class="block">
           <div class="block_inside">
-            <h4>Services</h4>
-          	<h2>Branding</h2><br>
+            <h4><a href="tags.html">Services</a></h4>
+          	<h2>Branding</h2>
+        	  <div class="spread-single">
+                <ul id="social">
+                    <li class="plusone">
+                      <g:plusone></g:plusone>
+                    </li>
+                    <li class="fblike">
+                      <iframe src="http://www.facebook.com/plugins/like.php?
+                        app_id=182129078509067&amp;href=nicosblog.heroku.com
+                        &amp;send=false&amp;layout=button_count
+                        &amp;width=450&amp;show_faces=true
+                        &amp;action=like&amp;colorscheme=light
+                        &amp;font=verdana&amp;height=21"
+                        scrolling="no" frameborder="0" class="iframe-f" allowtransparency="true"></iframe>
+                    </li>
+                    <li class="bs-twitter">
+                        <a href="http://twitter.com/share" class="twitter-share-button iframe-t" data-count="horizontal" data-via="NicosKaralis"></a>
+                    </li>
+                </ul>
+                <img class="avatar avatar-35 photo gravatarImg" alt="" src="" height="35" width="35" data-email="dymytrhy@gmail.com">
+                <div class="Authordate">
+                    Por&nbsp;
+                    <span class="author">
+                        <a href="http://tecnoblog.net/author/rafacst/" title="Posts by Rafael Silva">Nicos Karalis</a>
+                    </span>&nbsp;<br>
+                    21/06/2011 às 09h51
+                </div>
+            </div>    
+            <hr/>
+            <br/>
+          	<!-- <div id="article_info">
+               <hr/>
+                <p>Escrito por <span class="author">NicosKaralis</span>, às 13:02 - 20 de junho de 2011</p>
+                <a href="#coments_area">10 Comentarios</a>
+               <hr/><br />
+              </div> #article_info -->
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla mi risus, tempor in, gravida quis, rutrum vitae, massa. Suspendisse congue, nibh et lacinia sodales. </p>
-      			<p>Risus nulla fringilla enim, sit amet adipiscing sapien risus sed velit. Sed vitae justo. In quis lorem nec justo varius sodales. Nullam eleifend accumsan mi. Nunc at velit. Maecenas velit. <a href="#">Read More</a></p>
+      			<p>Risus nulla fringilla enim, sit amet adipiscing sapien risus sed velit. Sed vitae justo. In quis lorem nec justo varius sodales. Nullam eleifend accumsan mi. Nunc at velit. Maecenas velit. </p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla mi risus, tempor in, gravida quis, rutrum vitae, massa. Suspendisse congue, nibh et lacinia sodales. </p>
+      			<p>Risus nulla fringilla enim, sit amet adipiscing sapien risus sed velit. Sed vitae justo. In quis lorem nec justo varius sodales. Nullam eleifend accumsan mi. Nunc at velit. Maecenas velit. </p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
       	</div>
+      	<div id="coments_area" class="block">
+      	  <div class="block_inside">
+            <ol id="coment_list">
+              <li>
+                <p class="name"><cite>Nick:</cite></p>
+                <p class="time">February 8th, 2009 at 5:38 am</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                <ol id="coment_list">
+                  <li>
+                    <p class="name"><cite>Nick:</cite></p>
+                    <p class="time">February 8th, 2009 at 5:38 am</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                    <ol id="coment_list">
+                      <li>
+                        <p class="name"><cite>Nick:</cite></p>
+                        <p class="time">February 8th, 2009 at 5:38 am</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                        <ol id="coment_list">
+                          <li>
+                            <p class="name"><cite>Nick:</cite></p>
+                            <p class="time">February 8th, 2009 at 5:38 am</p>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                            <ol id="coment_list">
+                              <li>
+                                <p class="name"><cite>Nick:</cite></p>
+                                <p class="time">February 8th, 2009 at 5:38 am</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                <ol id="coment_list">
+                                  <li>
+                                    <p class="name"><cite>Nick:</cite></p>
+                                    <p class="time">February 8th, 2009 at 5:38 am</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                    <ol id="coment_list">
+                                      <li>
+                                        <p class="name"><cite>Nick:</cite></p>
+                                        <p class="time">February 8th, 2009 at 5:38 am</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                        <ol id="coment_list">
+                                          <li>
+                                            <p class="name"><cite>Nick:</cite></p>
+                                            <p class="time">February 8th, 2009 at 5:38 am</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                            <ol id="coment_list">
+                                              <li>
+                                                <p class="name"><cite>Nick:</cite></p>
+                                                <p class="time">February 8th, 2009 at 5:38 am</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                                <ol id="coment_list">
+                                                  <li>
+                                                    <p class="name"><cite>Nick:</cite></p>
+                                                    <p class="time">February 8th, 2009 at 5:38 am</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+                                                  </li>
+                                                </ol>
+                                              </li>
+                                            </ol>
+                                          </li>
+                                        </ol>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <img class="avatar avatar-35 photo gravatarImg" alt="" src="" height="35" width="35" data-email="dymytrhy@gmail.com">
+                <p class="name"><cite>Nick:</cite></p>
+                <p class="time">February 8th, 2009 at 5:38 am</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+              </li>
+            </ol>
+          </div>
+      	</div><!-- #coments_area -->
       </div>
-      
       <div id="sidebar">
       	<img src="images/ribbon_browse.png" class="ribbon" alt="Featured Project">
       	<div class="block_inside">
@@ -119,15 +194,18 @@
         	</ul>
         	<div id="tags">
         	  <div class="popup">
-          	  <h3>Tags</h3>
-              <a href="#">Notes</a>
-              <a href="#">Mac OS X</a>
-              <a href="#">AD</a>
-              <a href="#">Teste</a>
-              <a href="#">Desenvolvimento</a>
-              <a href="#">Programação</a>
-              <a href="#">Ruby</a>
-              <a href="#">Ruby on Rails</a>
+        	    <div class="popup_inside">
+        	      <h3>Tags</h3>
+                <a href="#">Notes</a>
+                <a href="#">Mac OS X</a>
+                <a href="#">AD</a>
+                <a href="#">Teste</a>
+                <a href="#">Desenvolvimento</a>
+                <a href="#">Programação</a>
+                <a href="#">Ruby</a>
+                <a href="#">Ruby on Rails</a>
+                <div class="clear"></div>
+        	    </div>
           	</div><!-- .popup -->
           	<div class="pre_popup">
               <h3>Tags</h3>
@@ -181,7 +259,7 @@
     </div><!-- .container -->
   </div><!-- #footer -->
   
-  <div id="back_top">Back</div>
+  <a href="#" id="back_top">Back</a>
   <script type="text/javascript" charset="utf-8">
         
     $('#block_featured').slider({

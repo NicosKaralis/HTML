@@ -1,16 +1,57 @@
+/*!
+ * jQuery JavaScript Library v1.6
+ * http://jquery.com/
+ *
+ * Copyright 2011, John Resig
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * Includes Sizzle.js
+ * http://sizzlejs.com/
+ * Copyright 2011, The Dojo Foundation
+ * Released under the MIT, BSD, and GPL Licenses.
+ *
+ * Date: Mon May 2 13:50:00 2011 -0400
+ */
 (function( window, undefined ) {
+
+// Use the correct document accordingly with window argument (sandbox)
 var document = window.document,
 	navigator = window.navigator,
 	location = window.location;
 var jQuery = (function() {
+
+// Define a local copy of jQuery
 var jQuery = function( selector, context ) {
+		// The jQuery object is actually just the init constructor 'enhanced'
 		return new jQuery.fn.init( selector, context, rootjQuery );
 	},
+
+	// Map over jQuery in case of overwrite
 	_jQuery = window.jQuery,
+
+	// Map over the $ in case of overwrite
 	_$ = window.$,
+
+	// A central reference to the root jQuery(document)
 	rootjQuery,
+
+	// A simple way to check for HTML strings or ID strings
+	// (both of which we optimize for)
 	quickExpr = /^(?:[^<]*(<[\w\W]+>)[^>]*$|#([\w\-]*)$)/,
-	rnotwhite = /\S/,trimLeft = /^\s+/,trimRight = /\s+$/,rdigit = /\d/,rsingleTag = /^<(\w+)\s*\/?>(?:<\/\1>)?$/,
+
+	// Check if a string has a non-whitespace character in it
+	rnotwhite = /\S/,
+
+	// Used for trimming whitespace
+	trimLeft = /^\s+/,
+	trimRight = /\s+$/,
+
+	// Check for digits
+	rdigit = /\d/,
+
+	// Match a standalone tag
+	rsingleTag = /^<(\w+)\s*\/?>(?:<\/\1>)?$/,
 
 	// JSON RegExp
 	rvalidchars = /^[\],:{}\s]*$/,
@@ -8740,4 +8781,85 @@ jQuery.each( ["Left", "Top"], function( i, name ) {
 			} else {
 				this[ method ] = val;
 			}
-		});};});function getWindow( elem ) {return jQuery.isWindow( elem ) ?elem :elem.nodeType === 9 ?elem.defaultView || elem.parentWindow :false;}jQuery.each([ "Height", "Width" ], function( i, name ) {var type = name.toLowerCase();jQuery.fn["inner" + name] = function() {return this[0] ?parseFloat( jQuery.css( this[0], type, "padding" ) ) :null;};jQuery.fn["outer" + name] = function( margin ) {return this[0] ?parseFloat( jQuery.css( this[0], type, margin ? "margin" : "border" ) ) :null;};jQuery.fn[ type ] = function( size ) {var elem = this[0];if ( !elem ) {return size == null ? null : this;}if ( jQuery.isFunction( size ) ) {return this.each(function( i ) {var self = jQuery( this );self[ type ]( size.call( this, i, self[ type ]() ) );});}if ( jQuery.isWindow( elem ) ) {var docElemProp = elem.document.documentElement[ "client" + name ];return elem.document.compatMode === "CSS1Compat" && docElemProp ||elem.document.body[ "client" + name ] || docElemProp;} else if ( elem.nodeType === 9 ) {return Math.max(elem.documentElement["client" + name],elem.body["scroll" + name], elem.documentElement["scroll" + name],elem.body["offset" + name], elem.documentElement["offset" + name]);} else if ( size === undefined ) {var orig = jQuery.css( elem, type ),ret = parseFloat( orig );return jQuery.isNaN( ret ) ? orig : ret;} else {return this.css( type, typeof size === "string" ? size : size + "px" );}};});window.jQuery = window.$ = jQuery;})(window);
+		});
+	};
+});
+
+function getWindow( elem ) {
+	return jQuery.isWindow( elem ) ?
+		elem :
+		elem.nodeType === 9 ?
+			elem.defaultView || elem.parentWindow :
+			false;
+}
+
+
+
+
+// Create innerHeight, innerWidth, outerHeight and outerWidth methods
+jQuery.each([ "Height", "Width" ], function( i, name ) {
+
+	var type = name.toLowerCase();
+
+	// innerHeight and innerWidth
+	jQuery.fn["inner" + name] = function() {
+		return this[0] ?
+			parseFloat( jQuery.css( this[0], type, "padding" ) ) :
+			null;
+	};
+
+	// outerHeight and outerWidth
+	jQuery.fn["outer" + name] = function( margin ) {
+		return this[0] ?
+			parseFloat( jQuery.css( this[0], type, margin ? "margin" : "border" ) ) :
+			null;
+	};
+
+	jQuery.fn[ type ] = function( size ) {
+		// Get window width or height
+		var elem = this[0];
+		if ( !elem ) {
+			return size == null ? null : this;
+		}
+
+		if ( jQuery.isFunction( size ) ) {
+			return this.each(function( i ) {
+				var self = jQuery( this );
+				self[ type ]( size.call( this, i, self[ type ]() ) );
+			});
+		}
+
+		if ( jQuery.isWindow( elem ) ) {
+			// Everyone else use document.documentElement or document.body depending on Quirks vs Standards mode
+			// 3rd condition allows Nokia support, as it supports the docElem prop but not CSS1Compat
+			var docElemProp = elem.document.documentElement[ "client" + name ];
+			return elem.document.compatMode === "CSS1Compat" && docElemProp ||
+				elem.document.body[ "client" + name ] || docElemProp;
+
+		// Get document width or height
+		} else if ( elem.nodeType === 9 ) {
+			// Either scroll[Width/Height] or offset[Width/Height], whichever is greater
+			return Math.max(
+				elem.documentElement["client" + name],
+				elem.body["scroll" + name], elem.documentElement["scroll" + name],
+				elem.body["offset" + name], elem.documentElement["offset" + name]
+			);
+
+		// Get or set width or height on the element
+		} else if ( size === undefined ) {
+			var orig = jQuery.css( elem, type ),
+				ret = parseFloat( orig );
+
+			return jQuery.isNaN( ret ) ? orig : ret;
+
+		// Set the width or height on the element (default to pixels if value is unitless)
+		} else {
+			return this.css( type, typeof size === "string" ? size : size + "px" );
+		}
+	};
+
+});
+
+
+window.jQuery = window.$ = jQuery;
+})(window);

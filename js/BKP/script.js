@@ -141,10 +141,8 @@ jQuery.fn.gravatarImg = function(params) {
 showPopUp = function() {
     var position = $(this).position();
     var popup = $(this).parent().find('.popup');
-    var paddingTop = parseInt(popup.css("padding-top")) + parseInt(popup.css("border-top-width")) + 11;
+    var paddingTop = parseInt(popup.css("padding-top")) + parseInt(popup.css("border-top-width")) + 10;
     var paddingLeft = parseInt(popup.css("padding-left")) + parseInt(popup.css("border-left-width"));
-		var popup_inside = popup.find('.popup_inside');
-		paddingLeft = paddingLeft + parseInt(popup_inside.css("padding-left")) + parseInt(popup_inside.css("border-left-width"));
     var popupWidth = popup.parent().width();
     popup.css({
         "position": "absolute",
